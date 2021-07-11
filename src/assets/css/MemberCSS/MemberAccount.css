@@ -15,54 +15,57 @@ body {
   width: 100%;
   height: 100vh;
 }
-
-.activity-wrapper {
+nav {
+  width: 100%;
+  height: 66px;
+  background: red;
+}
+.MAactivity-wrapper {
   width: 100%;
   height: 100vh;
   overflow-y: auto;
 }
 
-.navHead {
+.MAnavHead {
   height: 65px;
   background: var(--main-color);
 }
 
-.memberAside {
+.MAmemberAside {
   max-width: 100vw;
-  height: 100vh;
-  margin: 0px auto;
+  margin: 0px auto 100px;
 }
 
-.memberPage {
+.MAmemberPage {
   display: flex;
   max-width: 1280px;
   margin: 0px auto;
 }
 
-.memberCentreTitle {
+.MAmemberCentreTitle {
   width: 280px;
   height: 80px;
 }
 
-.CentreTitle {
+.MACentreTitle {
   font-size: 70px;
   font-weight: bold;
   color: var(--main-color);
   margin-top: 50px;
 }
 
-.memberCentreList {
+.MAmemberCentreList {
   width: 200px;
   margin: 0px auto;
 }
 
-.memberCentreList ul {
+.MAmemberCentreList ul {
   padding-left: 0;
   flex-direction: column;
   list-style-type: none;
 }
 
-.memberCentreList ul li a {
+.MAmemberCentreList ul li a {
   font-size: 28px;
   text-decoration: none;
   display: block;
@@ -71,17 +74,21 @@ body {
   margin-top: 40px;
 }
 
-.memberCentreList ul li a:hover {
+.MAmemberCentreList ul li a:hover {
+  font-size: 32px !important;
+  color: var(--fifth-color) !important;
+}
+.MAactiveList {
   font-size: 32px !important;
   color: var(--fifth-color) !important;
 }
 
-.activeList a {
+.MAactiveList a {
   font-size: 32px !important;
   color: var(--fifth-color) !important;
 }
 
-.memberBoard {
+.MAmemberBoard {
   position: relative;
   height: 750px;
   width: 900px;
@@ -91,22 +98,25 @@ body {
   border-radius: 20px;
 }
 
-.memberAcount {
+.MAmemberAcount {
   display: inline-flex;
+  padding: 20px 0;
 }
 
-.acountTitle {
+.MAacountTitle {
   font-size: 32px;
   color: var(--fontWhite);
   margin: 20px 40px;
 }
 
-.acountSubhead {
+.MAacountSubhead {
   color: #cccccc;
-  line-height: 50px;
+  /* line-height: 50px; */
+  height: 30px;
+  margin: auto 0;
 }
 
-.memberBoard hr {
+.MAmemberBoard hr {
   width: 90%;
   height: 2px;
   border: none;
@@ -114,84 +124,89 @@ body {
   margin-top: 0px;
 }
 
-.memberAccountInformation {
+.MAmemberAccountInformation {
   display: inline-flex;
-  padding: 10px 40px;
+  padding: 0px 40px;
   width: 90%;
 }
 
-.accountInformation {
+.MAaccountInformation {
   width: 70%;
   height: 100%;
 }
 
-.account {
+.MAaccount {
   display: inline-flex;
   align-items: flex-end;
   width: 550px;
   padding-top: 30px;
 }
 
-.account a {
+.MAaccount a {
   text-decoration: none;
 }
 
-.listTitle {
+.MAlistTitle {
   width: 150px;
   color: var(--fontWhite);
   font-size: 24px;
 }
 
-.content {
+.MAcontent {
   font-size: 20px;
   color: #cccccc;
 }
 
-.change {
+.MAchange {
   font-size: 20px;
   color: var(--sixth-color);
   margin: 0px 20px;
+  white-space: nowrap;
 }
 
-.change:hover {
+.MAchange:hover {
   text-decoration: underline;
+  color: var(--sixth-color);
 }
 
-.member {
+.MAmember {
   margin-left: 20px;
   color: var(--fontWhite);
   font-size: 20px;
 }
 
-.smallChange {
+.MAsmallChange {
   margin-left: 20px;
   font-size: 16px;
 }
+.MAitemCheck {
+  margin: 0px 20px;
+}
 
-.smallChange img {
+.MAsmallChange img {
   width: 16px;
   height: 16px;
 }
 
-.smallChange {
+.MAsmallChange {
   text-decoration: underline;
 }
 
-.dateInput {
+.MAdateInput {
   border-radius: 5px;
   margin: 0 10px;
 }
 
-.headPicture {
+.MAheadPicture {
   width: 30%;
   height: 300px;
 }
 
-.headPicture1240 {
+.MAheadPicture1240 {
   display: none;
 }
 
-.pictureGo {
+.MApictureGo {
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -200,7 +215,7 @@ body {
   margin: auto;
 }
 
-.pictureCard label {
+.MApictureCard label {
   border-radius: 8px;
   background: #6d695f;
   width: 120px;
@@ -214,15 +229,15 @@ body {
   text-align: center;
 }
 
-.pictureCard label:hover {
+.MApictureCard label:hover {
   background: #777777;
 }
 
-.pictureCard input[type="file"] {
+.MApictureCard input[type="file"] {
   display: none;
 }
 
-.btn {
+.MAbtn {
   background: var(--second-color);
   color: var(--fontWhite);
   width: 240px;
@@ -231,21 +246,24 @@ body {
   font-size: 24px;
 }
 
-.btn:hover {
+.MAbtn:hover {
   color: var(--fontWhite);
   background: var(--btnHover);
 }
 
-.List1240 {
+.MAList1240 {
   display: none;
 }
 
 @media screen and (max-width: 1240px) {
-  .memberCentreTitle {
+  .MAmemberAside {
+    margin: 20px auto;
+  }
+  .MAmemberCentreTitle {
     margin: 20px auto;
   }
 
-  .CentreTitle {
+  .MACentreTitle {
     margin: 0px auto;
     font-size: 70px;
     font-weight: bold;
@@ -253,64 +271,79 @@ body {
     width: 280px;
   }
 
-  .memberAccountInformation {
+  .MAmemberAccountInformation {
     max-width: 70vw;
   }
 
-  .accountInformation {
+  .MAaccountInformation {
+    width: 100%;
+  }
+  .MAmemberAcount {
+    margin-left: 20px;
+  }
+
+  .MAaccount {
     width: 100%;
   }
 
-  .account {
-    width: 100%;
-  }
-
-  .headPicture720 {
+  .MAheadPicture720 {
     display: none;
   }
 
-  .headPicture1240 {
+  .MAheadPicture1240 {
     display: block;
     margin: 10px auto;
+    height: 250px;
   }
 
-  .memberBoard {
+  .MAmemberBoard {
     margin: 0px auto;
     max-width: 80vw;
     height: 100%;
   }
 
-  .List1240 {
+  .MAList1240 {
     display: block;
+
     width: 100%;
   }
 
-  .List1240 ul {
+  .MAList1240 ul {
     display: flex;
     flex-direction: row;
   }
 
-  .List1240 ul li {
+  .MAList1240 ul li {
     margin: 0px auto;
   }
 
-  .List1240 ul li a {
+  .MAList1240 ul li a {
     display: flex;
     flex-direction: column;
     margin: 0px auto;
   }
 
-  .List1240 ul li a img {
+  .MAList1240 ul li a img {
     width: 40px;
     height: 40px;
     margin: 0 auto;
   }
 
-  .memberPage {
+  .MAmemberPage {
     flex-direction: column;
   }
 
-  .containerList {
+  .MAcontainerList {
     display: none;
+  }
+
+  .MAbtn {
+    margin: 0px auto;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .MAmemberAccountInformation {
+    padding: 10px 30px;
   }
 }
