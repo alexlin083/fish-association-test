@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
 //icon
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar, faStarHalfAlt } from '@fortawesome/free-solid-svg-icons';
+import { TiStarFullOutline, TiStarHalfOutline } from "react-icons/ti";
 //css
 import { Wrapper, Card, Money, BtnInfo } from './styled';
 //JoinCard component
@@ -17,7 +16,10 @@ const rankStyle = {
     width: '10%',
     top: '62%',
 }
-
+const iconStyle = {
+    color: "#457B9D", 
+    fontSize: '1.2vw'
+}
 export default class ActivityThree extends PureComponent {
     render() {
         return (
@@ -31,17 +33,15 @@ export default class ActivityThree extends PureComponent {
                         <h2>基隆 | 海生館</h2>
                         <p>豐富的海洋之旅 享受親子時光最好的選擇 </p>
                         <div>
-                            <FontAwesomeIcon icon={faStar} color="#457B9D"/>
-                            <FontAwesomeIcon icon={faStar} color="#457B9D"/>
-                            <FontAwesomeIcon icon={faStar} color="#457B9D"/>
-                            <FontAwesomeIcon icon={faStar} color="#457B9D"/>
-                            <FontAwesomeIcon icon={faStarHalfAlt} color="#457B9D"/>
+                            <TiStarFullOutline style={iconStyle}/>
+                            <TiStarFullOutline style={iconStyle}/>
+                            <TiStarFullOutline style={iconStyle}/>
+                            <TiStarFullOutline style={iconStyle}/>
+                            <TiStarHalfOutline style={iconStyle}/>
                             <span style={{color: "#8A8A8A"}}>(27459)</span>
                         </div>
                         <Money>
-                            <p>TWD <span>500</span> (成人)</p>
-                            <p>TWD <span>250</span> (成人)</p>
-                            
+                            <p>TWD <span>500</span> (成人) / <span>250</span> (小孩)</p>
                             <p>截止日期: 16/29</p>
                         </Money>
                         <BtnInfo>活動詳情</BtnInfo>

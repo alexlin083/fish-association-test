@@ -1,28 +1,22 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-import "../../src/assets/css/MemberCSS/MemberAccount.css";
-import "../../src/assets/css/normalize.css";
 
-import MemberTitleList from "../components/member/MemberTitleList";
-import RWDMemberTitle from "../components/member/RWDMemberTitle";
-import MemberBoard from "../components/member/MemberBoard";
-import RWDMemberList from "../components/member/RWDMemberList";
+// CSS style
+import "../components/MemberAccount/MemberAccount.css";
+//元件
+import MemberAside from "../components/MemberAccount/MemberAside";
+import RWDTitle from "../components/MemberAccount/RWDTitle";
 
-function MemberPage() {
+function Member(props) {
   return (
     <>
-      <div className="activity-wrapper">
-        <aside className="memberAside">
-          <div className="memberPage">
-            <MemberTitleList />
-            <RWDMemberTitle />
-            <MemberBoard />
-            <RWDMemberList />
-          </div>
-        </aside>
+      <div className="MAactivity-wrapper">
+        <nav></nav>
+        <RWDTitle />
+        <MemberAside />
+        <footer></footer>
       </div>
     </>
   );
 }
 
-export default MemberPage;
+export default Member;
